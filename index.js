@@ -3,6 +3,8 @@ const debug = require('./configs/debug')
 const express = require('express')
 const app = express()
 
+app.disable('x-powered-by')
+
 ;(async () => {
   await require('./configs/db')
 
