@@ -12,6 +12,9 @@ const app = express()
   const middlewareCors = require('cors')
   app.use(middlewareCors())
 
+  const middlewareVerification = require('./middlewares/verification')
+  app.use(middlewareVerification)
+
   const routerQinziceshi = require('./routers/qinziceshi')
   app.use('/qinziceshi',routerQinziceshi)
 
