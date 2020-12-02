@@ -20,5 +20,15 @@ const handleChildAgeRangeSubmission = require('../libs/handle-child-age-range-su
 router
   .route('/child-age-range/:childAgeRange')
   .get(handleChildAgeRangeSubmission)
+
+const handleShareButtonClicked = require('../libs/handle-share-button-clicked')
+router
+  .route('/share-button-clicked')
+  .get(handleShareButtonClicked)
+
+const handleShareImageHeld = require('../libs/handle-share-image-held')
+router
+  .route('/share-image-held')
+  .get(handleShareImageHeld)
   
 module.exports = router

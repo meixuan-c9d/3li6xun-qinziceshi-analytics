@@ -18,6 +18,8 @@ module.exports = (async () => {
       childAgeRange1: 0,
       childAgeRange2: 0,
       childAgeRange3: 0,
+      shareButtonClicked: 0,
+      shareImageHeld: 0
     })
     .write()
 
