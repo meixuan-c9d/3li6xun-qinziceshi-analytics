@@ -8,11 +8,14 @@ app.disable('x-powered-by')
 ;(async () => {
   await require('./configs/db')
 
+  const middlewareCors = require('cors')
+  app.use(middlewareCors({
+    origin: 'http://www.c9-d.com',
+    credentials: true
+  }))
+
   const middlewareSession = require('./middlewares/session')
   app.use(middlewareSession)
-
-  const middlewareCors = require('cors')
-  app.use(middlewareCors())
 
   const middlewareVerification = require('./middlewares/verification')
   app.use(middlewareVerification)
