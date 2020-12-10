@@ -6,7 +6,6 @@ module.exports = session({
   store: new RedisStore({
     client: redisClient
   }),
-  // secret: 'analyticssnake',
   secret: 'liquidsnake',
   resave: false,
   saveUninitialized: true
